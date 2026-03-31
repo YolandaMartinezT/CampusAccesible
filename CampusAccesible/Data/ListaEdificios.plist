@@ -513,9 +513,9 @@
 		<key>show</key>
 		<true/>
 		<key>nombre</key>
-		<string>Gimnasio</string>
+		<string>Arena Borregos</string>
 		<key>imagen</key>
-		<string>gimnasio</string>
+		<string>arena</string>
 		<key>elevador</key>
 		<true/>
 		<key>horario</key>
@@ -595,8 +595,7 @@
 		<array/>
 		<key>coord</key>
 		<array>
-			<integer>18</integer>
-			<integer>85</integer>
+			<integer>120</integer>
 		</array>
 	</dict>
 	<dict>
@@ -700,7 +699,7 @@
 		<key>show</key>
 		<true/>
 		<key>nombre</key>
-		<string>Señor Latino</string>
+		<string>Nikkori</string>
 		<key>imagen</key>
 		<string>senorlatino</string>
 		<key>horario</key>
@@ -732,16 +731,16 @@
 		<key>show</key>
 		<true/>
 		<key>nombre</key>
-		<string>Oxxo</string>
+		<string>Oxxo Premium</string>
 		<key>imagen</key>
 		<string>oxxo</string>
 		<key>horario</key>
-		<string>7am - 9pm</string>
+		<string>7am - 10pm</string>
 		<key>banos</key>
 		<array/>
 		<key>coord</key>
 		<array>
-			<integer>80</integer>
+			<integer>159</integer>
 		</array>
 	</dict>
 	<dict>
@@ -762,11 +761,11 @@
 	</dict>
 	<dict>
 		<key>show</key>
-		<false/>
+		<true/>
 		<key>nombre</key>
-		<string>The Food Box</string>
+		<string>Señor Latino</string>
 		<key>imagen</key>
-		<string>foodbox</string>
+		<string>senorlatino</string>
 		<key>horario</key>
 		<string>7am - 9pm</string>
 		<key>banos</key>
@@ -863,6 +862,53 @@
 		<array>
 			<integer>154</integer>
 			<integer>155</integer>
+		</array>
+	</dict>
+	<dict>
+		<key>show</key>
+		<true/>
+		<key>nombre</key>
+		<string>Expedition FEMSA</string>
+		<key>imagen</key>
+		<string>expedition</string>
+		<key>elevador</key>
+		<true/>
+		<key>horario</key>
+		<string>7am - 9pm</string>
+		<key>banos</key>
+		<array>
+			<dict>
+				<key>ambulatorio</key>
+				<true/>
+				<key>nombre</key>
+				<string>2 Piso</string>
+			</dict>
+			<dict>
+				<key>ambulatorio</key>
+				<true/>
+				<key>nombre</key>
+				<string>1 Piso</string>
+			</dict>
+		</array>
+		<key>coord</key>
+		<array>
+			<integer>156</integer>
+		</array>
+	</dict>
+	<dict>
+		<key>show</key>
+		<true/>
+		<key>nombre</key>
+		<string>Tim Hortons</string>
+		<key>imagen</key>
+		<string>tecstore</string>
+		<key>horario</key>
+		<string>6am - 10pm</string>
+		<key>banos</key>
+		<array/>
+		<key>coord</key>
+		<array>
+			<integer>120</integer>
 		</array>
 	</dict>
 </array>

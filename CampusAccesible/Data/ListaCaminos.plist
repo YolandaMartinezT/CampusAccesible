@@ -1698,5 +1698,61 @@
 		<key>accesible</key>
 		<true/>
 	</dict>
+	<dict>
+		<key>punto1</key>
+		<integer>132</integer>
+		<key>punto2</key>
+		<integer>157</integer>
+		<key>accesible</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>punto1</key>
+		<integer>157</integer>
+		<key>punto2</key>
+		<integer>156</integer>
+		<key>accesible</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>punto1</key>
+		<integer>157</integer>
+		<key>punto2</key>
+		<integer>158</integer>
+		<key>accesible</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>punto1</key>
+		<integer>158</integer>
+		<key>punto2</key>
+		<integer>155</integer>
+		<key>accesible</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>punto1</key>
+		<integer>154</integer>
+		<key>punto2</key>
+		<integer>155</integer>
+		<key>accesible</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>punto1</key>
+		<integer>158</integer>
+		<key>punto2</key>
+		<integer>154</integer>
+		<key>accesible</key>
+		<false/>
+	</dict>
+	<dict>
+		<key>punto1</key>
+		<integer>74</integer>
+		<key>punto2</key>
+		<integer>159</integer>
+		<key>accesible</key>
+		<true/>
+	</dict>
 </array>
 </plist>
