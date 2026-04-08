@@ -584,7 +584,7 @@
 	</dict>
 	<dict>
 		<key>show</key>
-		<true/>
+		<false/>
 		<key>nombre</key>
 		<string>TECstore</string>
 		<key>imagen</key>
@@ -701,7 +701,7 @@
 		<key>nombre</key>
 		<string>Nikkori</string>
 		<key>imagen</key>
-		<string>senorlatino</string>
+		<string>nikkori</string>
 		<key>horario</key>
 		<string>6:30am - 9pm</string>
 		<key>banos</key>
@@ -901,7 +901,7 @@
 		<key>nombre</key>
 		<string>Tim Hortons</string>
 		<key>imagen</key>
-		<string>tecstore</string>
+		<string>timhortons</string>
 		<key>horario</key>
 		<string>6am - 10pm</string>
 		<key>banos</key>
@@ -909,6 +909,86 @@
 		<key>coord</key>
 		<array>
 			<integer>120</integer>
+		</array>
+	</dict>
+	<dict>
+		<key>show</key>
+		<true/>
+		<key>nombre</key>
+		<string>Tec Store</string>
+		<key>imagen</key>
+		<string>tecstore</string>
+		<key>horario</key>
+		<string>6am - 8pm</string>
+		<key>banos</key>
+		<array/>
+		<key>coord</key>
+		<array>
+			<integer>120</integer>
+		</array>
+	</dict>
+	<dict>
+		<key>show</key>
+		<true/>
+		<key>nombre</key>
+		<string>Punto de Reflexión</string>
+		<key>imagen</key>
+		<string>puntoblanco</string>
+		<key>horario</key>
+		<string>6am - 10pm</string>
+		<key>banos</key>
+		<array/>
+		<key>coord</key>
+		<array>
+			<integer>160</integer>
+		</array>
+	</dict>
+	<dict>
+		<key>show</key>
+		<true/>
+		<key>nombre</key>
+		<string>Tec Lounge</string>
+		<key>imagen</key>
+		<string>teclounge</string>
+		<key>horario</key>
+		<string>6am - 8pm</string>
+		<key>banos</key>
+		<array/>
+		<key>coord</key>
+		<array>
+			<integer>161</integer>
+		</array>
+	</dict>
+	<dict>
+		<key>show</key>
+		<true/>
+		<key>nombre</key>
+		<string>Oxxo Centrales</string>
+		<key>imagen</key>
+		<string>oxxocentrales</string>
+		<key>horario</key>
+		<string>6am - 9pm</string>
+		<key>banos</key>
+		<array/>
+		<key>coord</key>
+		<array>
+			<integer>162</integer>
+		</array>
+	</dict>
+	<dict>
+		<key>show</key>
+		<true/>
+		<key>nombre</key>
+		<string>Santander Work Café</string>
+		<key>imagen</key>
+		<string>santander</string>
+		<key>horario</key>
+		<string>6am - 8pm</string>
+		<key>banos</key>
+		<array/>
+		<key>coord</key>
+		<array>
+			<integer>163</integer>
 		</array>
 	</dict>
 </array>
