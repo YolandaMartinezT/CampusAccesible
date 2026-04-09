@@ -931,7 +931,7 @@
 		<key>show</key>
 		<true/>
 		<key>nombre</key>
-		<string>Punto de Reflexión</string>
+		<string>Espacio de Reflexión</string>
 		<key>imagen</key>
 		<string>puntoblanco</string>
 		<key>horario</key>
