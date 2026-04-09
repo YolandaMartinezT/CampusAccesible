@@ -31,6 +31,7 @@ struct CreditsView: View {
                         CreditRow(name: "Joao Gabriel Moura De Almeida", role: "Desarrollo iOS")
                         CreditRow(name: "Luis Villarreal", role: "Desarrollo iOS")
                         CreditRow(name: "Arturo González", role: "Desarrollo iOS")
+                        CreditRow(name: "Louis Loewen", role: "Rediseño SwiftUI · iOS 26")
                     }
 
                     Divider()
