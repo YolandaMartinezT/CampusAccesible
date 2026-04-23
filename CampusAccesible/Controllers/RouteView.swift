@@ -9,6 +9,7 @@ private let campusCenter = CLLocationCoordinate2D(latitude: 25.6515, longitude: 
 struct RouteView: View {
     @Environment(CampusDataService.self) private var dataService
     @State private var viewModel = RouteViewModel()
+    @State private var locationService = LocationService()
     @State private var cameraPosition: MapCameraPosition = .camera(
         MapCamera(centerCoordinate: campusCenter, distance: 1500)
     )
@@ -47,6 +48,7 @@ struct RouteView: View {
         }
         .onAppear {
             viewModel.configure(with: dataService)
+            locationService.requestAndStart()
         }
         .onChange(of: viewModel.isAccessible) {
             viewModel.calculateRoute()
@@ -58,12 +60,28 @@ struct RouteView: View {
         @Bindable var bvm = vm
         VStack(spacing: 0) {
             VStack(spacing: 12) {
-                SuggestionTextField(
-                    placeholder: "Origen",
-                    text: $bvm.originText,
-                    suggestions: vm.originSuggestions(),
-                    onSelect: { vm.selectOrigin($0) }
-                )
+                VStack(spacing: 6) {
+                    SuggestionTextField(
+                        placeholder: "Origen",
+                        text: $bvm.originText,
+                        suggestions: vm.originSuggestions(),
+                        onSelect: { vm.selectOrigin($0) }
+                    )
+                    if locationService.isAuthorized {
+                        Button {
+                            if let loc = locationService.userLocation {
+                                vm.useCurrentLocation(loc)
+                            }
+                        } label: {
+                            Label("Usar mi ubicación", systemImage: "location.fill")
+                                .font(.caption)
+                                .foregroundStyle(.blue)
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                        }
+                        .accessibilityLabel("Usar mi ubicación como origen")
+                        .padding(.horizontal, 4)
+                    }
+                }
 
                 SuggestionTextField(
                     placeholder: "Destino",

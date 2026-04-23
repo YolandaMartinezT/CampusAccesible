@@ -11,6 +11,8 @@ struct Building: Identifiable, Hashable {
     let hasElevator: Bool?
     let schedule: String
     let bathrooms: [Bathroom]
+    let floors: [FloorInfo]
+    let category: String
     let coordIndices: [Int]
     let show: Bool
 }
@@ -19,4 +21,9 @@ struct Bathroom: Identifiable, Hashable {
     let id: String
     let name: String
     let isAccessible: Bool
+}
+
+struct FloorInfo: Identifiable, Hashable {
+    let id: Int
+    let description: String
 }

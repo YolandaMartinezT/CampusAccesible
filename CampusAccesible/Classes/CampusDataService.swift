@@ -69,16 +69,24 @@ final class CampusDataService {
                    let name = dict["nombre"] as? String,
                    let imageName = dict["imagen"] as? String,
                    let schedule = dict["horario"] as? String,
-                   let bathroomsRaw = dict["banos"] as? NSArray,
                    let coordIndices = dict["coord"] as? [Int],
                    let show = dict["show"] as? Bool {
                     let hasElevator = dict["elevador"] as? Bool
+                    let bathroomsRaw = dict["banos"] as? NSArray ?? NSArray()
                     let bathrooms: [Bathroom] = bathroomsRaw.compactMap { item in
                         guard let b = item as? NSDictionary,
                               let bName = b["nombre"] as? String,
                               let accessible = b["ambulatorio"] as? Bool else { return nil }
                         return Bathroom(id: bName, name: bName, isAccessible: accessible)
                     }
+                    let floorsRaw = dict["pisos"] as? NSArray ?? NSArray()
+                    let floors: [FloorInfo] = floorsRaw.compactMap { item in
+                        guard let f = item as? NSDictionary,
+                              let floorNum = f["piso"] as? Int,
+                              let desc = f["descripcion"] as? String else { return nil }
+                        return FloorInfo(id: floorNum, description: desc)
+                    }
+                    let category = dict["categoria"] as? String ?? "General"
                     buildingMap[name] = Building(
                         id: name,
                         name: name,
@@ -86,6 +94,8 @@ final class CampusDataService {
                         hasElevator: hasElevator,
                         schedule: schedule,
                         bathrooms: bathrooms,
+                        floors: floors,
+                        category: category,
                         coordIndices: coordIndices,
                         show: show
                     )

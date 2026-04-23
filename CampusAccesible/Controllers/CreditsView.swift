@@ -17,7 +17,7 @@ struct CreditsView: View {
                     VStack(alignment: .leading, spacing: 4) {
                         Text("ExploraTec")
                             .font(.largeTitle.bold())
-                        Text("Campus Accesible — Tec de Monterrey")
+                        Text("Departamento de accesibilidad — Tec de Monterrey")
                             .font(.subheadline)
                             .foregroundStyle(.secondary)
                     }

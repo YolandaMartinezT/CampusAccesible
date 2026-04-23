@@ -33,6 +33,23 @@ struct BuildingDetailView: View {
                 }
             }
 
+            if !building.floors.isEmpty {
+                Section("Pisos") {
+                    ForEach(building.floors) { floor in
+                        VStack(alignment: .leading, spacing: 4) {
+                            Text("Piso \(floor.id)")
+                                .font(.subheadline)
+                                .fontWeight(.semibold)
+                            Text(floor.description)
+                                .font(.body)
+                                .foregroundStyle(.secondary)
+                        }
+                        .padding(.vertical, 2)
+                        .accessibilityElement(children: .combine)
+                    }
+                }
+            }
+
             if !building.bathrooms.isEmpty {
                 Section("Baños") {
                     NavigationLink("Ver baños accesibles") {

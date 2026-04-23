@@ -3,6 +3,7 @@
 
 import SwiftUI
 import MapKit
+import CoreLocation
 import Observation
 
 @Observable
@@ -66,6 +67,56 @@ final class RouteViewModel {
             return
         }
         routeCoordinates = pf.findPath(from: from, to: to, accessible: isAccessible)
+    }
+
+    func useCurrentLocation(_ coordinate: CLLocationCoordinate2D) {
+        guard let service = dataService else { return }
+        guard let nearest = service.coordinates.min(by: { a, b in
+            let da = (a.latitude - coordinate.latitude) * (a.latitude - coordinate.latitude)
+                   + (a.longitude - coordinate.longitude) * (a.longitude - coordinate.longitude)
+            let db = (b.latitude - coordinate.latitude) * (b.latitude - coordinate.latitude)
+                   + (b.longitude - coordinate.longitude) * (b.longitude - coordinate.longitude)
+            return da < db
+        }) else { return }
+        originText = "Mi ubicación"
+        originIndex = nearest.id
+        originCoordinate = coordinate
+        calculateRoute()
+    }
+}
+
+@Observable
+final class LocationService: NSObject, CLLocationManagerDelegate {
+    var userLocation: CLLocationCoordinate2D?
+    var isAuthorized = false
+
+    private let manager = CLLocationManager()
+
+    override init() {
+        super.init()
+        manager.delegate = self
+        manager.desiredAccuracy = kCLLocationAccuracyBest
+    }
+
+    func requestAndStart() {
+        switch manager.authorizationStatus {
+        case .notDetermined:
+            manager.requestWhenInUseAuthorization()
+        case .authorizedWhenInUse, .authorizedAlways:
+            manager.startUpdatingLocation()
+        default:
+            break
+        }
+    }
+
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        userLocation = locations.last?.coordinate
+    }
+
+    func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
+        isAuthorized = manager.authorizationStatus == .authorizedWhenInUse
+                    || manager.authorizationStatus == .authorizedAlways
+        if isAuthorized { manager.startUpdatingLocation() }
     }
 }
 

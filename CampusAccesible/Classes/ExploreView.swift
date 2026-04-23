@@ -6,19 +6,27 @@ import SwiftUI
 struct ExploreView: View {
     @Environment(CampusDataService.self) private var dataService
 
-    private var sortedBuildings: [Building] {
-        dataService.buildings.values
-            .filter { $0.show }
-            .sorted { $0.name < $1.name }
+    private var buildingsByCategory: [(category: String, buildings: [Building])] {
+        let visible = dataService.buildings.values.filter { $0.show }
+        let grouped = Dictionary(grouping: visible, by: \.category)
+        return grouped
+            .map { (category: $0.key, buildings: $0.value.sorted { $0.name < $1.name }) }
+            .sorted { $0.category < $1.category }
     }
 
     var body: some View {
         NavigationStack {
-            List(sortedBuildings) { building in
-                NavigationLink(value: building) {
-                    BuildingListRow(building: building)
+            List {
+                ForEach(buildingsByCategory, id: \.category) { group in
+                    Section(group.category) {
+                        ForEach(group.buildings) { building in
+                            NavigationLink(value: building) {
+                                BuildingListRow(building: building)
+                            }
+                            .accessibilityLabel(building.name)
+                        }
+                    }
                 }
-                .accessibilityLabel(building.name)
             }
             .navigationTitle("Explora")
             .navigationDestination(for: Building.self) { building in
