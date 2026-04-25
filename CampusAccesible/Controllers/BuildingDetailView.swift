@@ -3,8 +3,26 @@
 
 import SwiftUI
 
+private struct FloorGroup: Identifiable {
+    let id: Int             // floorNumber
+    let displayName: String
+    let services: [String]
+}
+
 struct BuildingDetailView: View {
     let building: Building
+
+    private var floorGroups: [FloorGroup] {
+        Dictionary(grouping: building.floors, by: \.floorNumber)
+            .map { num, entries in
+                FloorGroup(
+                    id: num,
+                    displayName: entries[0].displayName,
+                    services: entries.map(\.description)
+                )
+            }
+            .sorted { $0.id < $1.id }
+    }
 
     var body: some View {
         List {
@@ -33,16 +51,18 @@ struct BuildingDetailView: View {
                 }
             }
 
-            if !building.floors.isEmpty {
+            if !floorGroups.isEmpty {
                 Section("Pisos") {
-                    ForEach(building.floors) { floor in
-                        VStack(alignment: .leading, spacing: 4) {
-                            Text("Piso \(floor.id)")
+                    ForEach(floorGroups) { group in
+                        VStack(alignment: .leading, spacing: 6) {
+                            Text(group.displayName)
                                 .font(.subheadline)
                                 .fontWeight(.semibold)
-                            Text(floor.description)
-                                .font(.body)
-                                .foregroundStyle(.secondary)
+                            ForEach(group.services, id: \.self) { service in
+                                Text(service)
+                                    .font(.body)
+                                    .foregroundStyle(.secondary)
+                            }
                         }
                         .padding(.vertical, 2)
                         .accessibilityElement(children: .combine)

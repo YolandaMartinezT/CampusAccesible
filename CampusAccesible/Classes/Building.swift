@@ -24,6 +24,15 @@ struct Bathroom: Identifiable, Hashable {
 }
 
 struct FloorInfo: Identifiable, Hashable {
-    let id: Int
+    let id: Int           // parse index — unique even when floor numbers repeat
+    let floorNumber: Int  // actual floor number used for sorting and grouping
     let description: String
+
+    var displayName: String {
+        switch floorNumber {
+        case ..<0:  return floorNumber == -1 ? "Sótano" : "Sótano \(abs(floorNumber))"
+        case 0:     return "Planta Baja"
+        default:    return "Piso \(floorNumber)"
+        }
+    }
 }

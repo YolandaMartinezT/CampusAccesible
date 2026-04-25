@@ -80,11 +80,11 @@ final class CampusDataService {
                         return Bathroom(id: bName, name: bName, isAccessible: accessible)
                     }
                     let floorsRaw = dict["pisos"] as? NSArray ?? NSArray()
-                    let floors: [FloorInfo] = floorsRaw.compactMap { item in
+                    let floors: [FloorInfo] = floorsRaw.enumerated().compactMap { index, item in
                         guard let f = item as? NSDictionary,
                               let floorNum = f["piso"] as? Int,
                               let desc = f["descripcion"] as? String else { return nil }
-                        return FloorInfo(id: floorNum, description: desc)
+                        return FloorInfo(id: index, floorNumber: floorNum, description: desc)
                     }
                     let category = dict["categoria"] as? String ?? "General"
                     buildingMap[name] = Building(
