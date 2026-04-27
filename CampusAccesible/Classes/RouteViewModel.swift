@@ -156,25 +156,28 @@ struct SuggestionTextField: View {
             .background(.white.opacity(0.15), in: .rect(cornerRadius: 10))
 
             if isFocused && !suggestions.isEmpty {
-                VStack(alignment: .leading, spacing: 0) {
-                    ForEach(suggestions.prefix(5), id: \.self) { suggestion in
-                        Button {
-                            onSelect(suggestion)
-                            isFocused = false
-                        } label: {
-                            Text(suggestion)
-                                .font(.subheadline)
-                                .foregroundStyle(.primary)
-                                .frame(maxWidth: .infinity, alignment: .leading)
-                                .padding(.horizontal, 12)
-                                .padding(.vertical, 10)
-                        }
-                        if suggestion != suggestions.prefix(5).last {
-                            Divider()
-                                .padding(.leading, 12)
+                ScrollView {
+                    VStack(alignment: .leading, spacing: 0) {
+                        ForEach(suggestions, id: \.self) { suggestion in
+                            Button {
+                                onSelect(suggestion)
+                                isFocused = false
+                            } label: {
+                                Text(suggestion)
+                                    .font(.subheadline)
+                                    .foregroundStyle(.primary)
+                                    .frame(maxWidth: .infinity, alignment: .leading)
+                                    .padding(.horizontal, 12)
+                                    .padding(.vertical, 10)
+                            }
+                            if suggestion != suggestions.last {
+                                Divider()
+                                    .padding(.leading, 12)
+                            }
                         }
                     }
                 }
+                .frame(maxHeight: 200)
                 .background(.ultraThinMaterial, in: .rect(cornerRadius: 10))
             }
         }

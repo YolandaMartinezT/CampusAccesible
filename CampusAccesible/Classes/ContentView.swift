@@ -5,16 +5,17 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var dataService = CampusDataService()
+    @State private var selectedTab = "ruta"
 
     var body: some View {
-        TabView {
-            Tab("Explora", systemImage: "building.2") {
+        TabView(selection: $selectedTab) {
+            Tab("Explora", systemImage: "building.2", value: "explora") {
                 ExploreView()
             }
-            Tab("Ruta", systemImage: "map") {
+            Tab("Ruta", systemImage: "map", value: "ruta") {
                 RouteView()
             }
-            Tab("Créditos", systemImage: "info.circle") {
+            Tab("Créditos", systemImage: "info.circle", value: "creditos") {
                 CreditsView()
             }
         }
