@@ -40,6 +40,9 @@ struct RouteView: View {
                 MapScaleView()
             }
             .ignoresSafeArea(edges: .bottom)
+            .simultaneousGesture(TapGesture().onEnded {
+                UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+            })
             .onChange(of: viewModel.routeCoordinates) {
                 fitCameraToRoute()
             }
