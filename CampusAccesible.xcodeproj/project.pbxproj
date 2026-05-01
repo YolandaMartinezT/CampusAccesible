@@ -12,13 +12,9 @@
 		41ACFF7320923A8000C1B055 /* ExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41ACFF7220923A8000C1B055 /* ExploreView.swift */; };
 		41ACFF75209241DE00C1B055 /* RouteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41ACFF74209241DE00C1B055 /* RouteViewModel.swift */; };
 		41F70C80207BF35B00B35DD9 /* CreditsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F70C7F207BF35B00B35DD9 /* CreditsView.swift */; };
+		A8C429ED2FA56FFB006317CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8C429EC2FA56FFB006317CE /* Assets.xcassets */; };
 		CF35AD902059985B00A3F17D /* CampusAccesibleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF35AD8F2059985B00A3F17D /* CampusAccesibleApp.swift */; };
 		CF35AD922059985B00A3F17D /* RouteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF35AD912059985B00A3F17D /* RouteView.swift */; };
-		CF35AD972059985B00A3F17D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF35AD952059985B00A3F17D /* Main.storyboard */; };
-		CF35AD992059985B00A3F17D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF35AD982059985B00A3F17D /* Assets.xcassets */; };
-		CF35AD9C2059985B00A3F17D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF35AD9A2059985B00A3F17D /* LaunchScreen.storyboard */; };
-		CF35ADA72059985B00A3F17D /* CampusAccesibleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF35ADA62059985B00A3F17D /* CampusAccesibleTests.swift */; };
-		CF35ADB22059985B00A3F17D /* CampusAccesibleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF35ADB12059985B00A3F17D /* CampusAccesibleUITests.swift */; };
 		CF9A7370207B34870018B2F7 /* Building.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9A736F207B34870018B2F7 /* Building.swift */; };
 		ED1C226F205A2B110095FFC3 /* PathfindingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1C226E205A2B110095FFC3 /* PathfindingService.swift */; };
 		ED334CFC205A3A960041E564 /* CampusCoordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED334CFB205A3A960041E564 /* CampusCoordinate.swift */; };
@@ -52,19 +48,13 @@
 		41ACFF7220923A8000C1B055 /* ExploreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreView.swift; sourceTree = "<group>"; };
 		41ACFF74209241DE00C1B055 /* RouteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteViewModel.swift; sourceTree = "<group>"; };
 		41F70C7F207BF35B00B35DD9 /* CreditsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsView.swift; sourceTree = "<group>"; };
+		A8C429EC2FA56FFB006317CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF35AD8C2059985B00A3F17D /* CampusAccesible.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CampusAccesible.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF35AD8F2059985B00A3F17D /* CampusAccesibleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampusAccesibleApp.swift; sourceTree = "<group>"; };
 		CF35AD912059985B00A3F17D /* RouteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteView.swift; sourceTree = "<group>"; };
-		CF35AD962059985B00A3F17D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		CF35AD982059985B00A3F17D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		CF35AD9B2059985B00A3F17D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CF35AD9D2059985B00A3F17D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF35ADA22059985B00A3F17D /* CampusAccesibleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CampusAccesibleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CF35ADA62059985B00A3F17D /* CampusAccesibleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampusAccesibleTests.swift; sourceTree = "<group>"; };
-		CF35ADA82059985B00A3F17D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF35ADAD2059985B00A3F17D /* CampusAccesibleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CampusAccesibleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CF35ADB12059985B00A3F17D /* CampusAccesibleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampusAccesibleUITests.swift; sourceTree = "<group>"; };
-		CF35ADB32059985B00A3F17D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF9A736F207B34870018B2F7 /* Building.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Building.swift; sourceTree = "<group>"; };
 		CFB2D1A72090FFA600378A14 /* centroEstudiantil.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = centroEstudiantil.gpx; sourceTree = "<group>"; };
 		CFB2D1A82090FFA700378A14 /* biblio.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = biblio.gpx; sourceTree = "<group>"; };
@@ -106,8 +96,6 @@
 			isa = PBXGroup;
 			children = (
 				CF35AD8E2059985B00A3F17D /* CampusAccesible */,
-				CF35ADA52059985B00A3F17D /* CampusAccesibleTests */,
-				CF35ADB02059985B00A3F17D /* CampusAccesibleUITests */,
 				CF35AD8D2059985B00A3F17D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -130,30 +118,10 @@
 				ED334CFE205A3B2D0041E564 /* Controllers */,
 				ED334CFD205A3B130041E564 /* Classes */,
 				CF35AD8F2059985B00A3F17D /* CampusAccesibleApp.swift */,
-				CF35AD952059985B00A3F17D /* Main.storyboard */,
-				CF35AD982059985B00A3F17D /* Assets.xcassets */,
-				CF35AD9A2059985B00A3F17D /* LaunchScreen.storyboard */,
 				CF35AD9D2059985B00A3F17D /* Info.plist */,
+				A8C429EC2FA56FFB006317CE /* Assets.xcassets */,
 			);
 			path = CampusAccesible;
-			sourceTree = "<group>";
-		};
-		CF35ADA52059985B00A3F17D /* CampusAccesibleTests */ = {
-			isa = PBXGroup;
-			children = (
-				CF35ADA62059985B00A3F17D /* CampusAccesibleTests.swift */,
-				CF35ADA82059985B00A3F17D /* Info.plist */,
-			);
-			path = CampusAccesibleTests;
-			sourceTree = "<group>";
-		};
-		CF35ADB02059985B00A3F17D /* CampusAccesibleUITests */ = {
-			isa = PBXGroup;
-			children = (
-				CF35ADB12059985B00A3F17D /* CampusAccesibleUITests.swift */,
-				CF35ADB32059985B00A3F17D /* Info.plist */,
-			);
-			path = CampusAccesibleUITests;
 			sourceTree = "<group>";
 		};
 		CFB2D1A62090FF9A00378A14 /* Locations */ = {
@@ -307,13 +275,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF35AD9C2059985B00A3F17D /* LaunchScreen.storyboard in Resources */,
-				CF35AD992059985B00A3F17D /* Assets.xcassets in Resources */,
 				EDEA4963205A020E004485C4 /* ListaEdificios.plist in Resources */,
-				CF35AD972059985B00A3F17D /* Main.storyboard in Resources */,
 				EDEA495F205A01FE004485C4 /* ListaCaminos.plist in Resources */,
 				EDEA4967205A0235004485C4 /* Coords.plist in Resources */,
 				EDEA4965205A0216004485C4 /* PuntosClave.plist in Resources */,
+				A8C429ED2FA56FFB006317CE /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,7 +322,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF35ADA72059985B00A3F17D /* CampusAccesibleTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,7 +329,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF35ADB22059985B00A3F17D /* CampusAccesibleUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,25 +346,6 @@
 			targetProxy = CF35ADAE2059985B00A3F17D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		CF35AD952059985B00A3F17D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CF35AD962059985B00A3F17D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		CF35AD9A2059985B00A3F17D /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CF35AD9B2059985B00A3F17D /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		CF35ADB42059985B00A3F17D /* Debug */ = {
@@ -549,7 +494,6 @@
 		CF35ADBA2059985B00A3F17D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = CampusAccesibleTests/Info.plist;
@@ -565,7 +509,6 @@
 		CF35ADBB2059985B00A3F17D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = CampusAccesibleTests/Info.plist;
@@ -581,7 +524,6 @@
 		CF35ADBD2059985B00A3F17D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = CampusAccesibleUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -596,7 +538,6 @@
 		CF35ADBE2059985B00A3F17D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = CampusAccesibleUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
