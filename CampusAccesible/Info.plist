@@ -23,10 +23,10 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Use Location</string>
+	<string>Tu ubicación se utiliza exclusivamente para calcular la ruta más corta y accesible entre los edificios del campus y mostrar tu posición en el mapa en tiempo real.</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
-<key>UIRequiredDeviceCapabilities</key>
+	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
 	</array>
