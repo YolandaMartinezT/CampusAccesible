@@ -1791,5 +1791,23 @@
 		<key>show</key>
 		<true/>
 	</dict>
+	<dict>
+		<key>categoria</key>
+		<string>Academico</string>
+		<key>coord</key>
+		<array>
+			<integer>200</integer>
+		</array>
+		<key>horario</key>
+		<string>8am - 10pm</string>
+		<key>imagen</key>
+		<string>HUBinnovacion</string>
+		<key>nombre</key>
+		<string>HUB de innov y emprendim Eduardo Garza T.</string>
+		<key>show</key>
+		<true/>
+		<key>elevador</key>
+		<true/>
+	</dict>
 </array>
 </plist>

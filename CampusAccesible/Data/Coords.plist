@@ -1202,5 +1202,23 @@
 		<key>longitud</key>
 		<real>25.65378</real>
 	</dict>
+	<dict>
+		<key>latitud</key>
+		<real>-100.291809</real>
+		<key>longitud</key>
+		<real>25.652832</real>
+	</dict>
+	<dict>
+		<key>latitud</key>
+		<real>-100.291473</real>
+		<key>longitud</key>
+		<real>25.652371</real>
+	</dict>
+	<dict>
+		<key>latitud</key>
+		<real>-100.291992</real>
+		<key>longitud</key>
+		<real>25.651985</real>
+	</dict>
 </array>
 </plist>
